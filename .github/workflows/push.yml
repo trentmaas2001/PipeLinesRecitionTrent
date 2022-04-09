@@ -106,7 +106,7 @@ jobs:
           
     - name: commit
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git commit
+      run: git commit -m "generated"
       
     - name: push
       working-directory: ${{env.GITHUB_WORKSPACE}}
