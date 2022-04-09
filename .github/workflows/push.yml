@@ -55,4 +55,4 @@ jobs:
     steps:
     - name: RunTests
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: echo TESTING
+      run: VSTest.Console.exe  Debug\UnitTest1.dll
