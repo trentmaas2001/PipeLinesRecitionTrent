@@ -42,7 +42,8 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: my-artifact
-          path: Debug/ # or path/to/artifact
+          path: ${{env.GITHUB_WORKSPACE}}/Debug/ # or path/to/artifact
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
       
 
   lint:
@@ -68,7 +69,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: my-artifact
-        path: Debug/
+        path: ${{env.GITHUB_WORKSPACE}}/Debug/
     
     - name: RunTests
       working-directory: ${{env.GITHUB_WORKSPACE}}
