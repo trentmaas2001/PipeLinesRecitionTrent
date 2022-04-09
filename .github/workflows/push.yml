@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: my-artifact
-          path: ${{env.GITHUB_WORKSPACE}}\x64\Release\ # or path/to/artifact
+          path: x64\Release\ # or path/to/artifact
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
       
 
@@ -69,8 +69,8 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: my-artifact
-        path: ${{env.GITHUB_WORKSPACE}}\x64\Release
+        path: x64\Release
     
     - name: RunTests
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: VSTest.Console.exe  \x64\Release\UnitTest1.dll
+      run: VSTest.Console.exe  x64\Release\UnitTest1.dll
