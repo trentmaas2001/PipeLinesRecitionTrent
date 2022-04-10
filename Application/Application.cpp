@@ -7,6 +7,8 @@
 
 CoolClass::CoolClass(void)
 {
+    yeet
+
 }
 
 int CoolClass::Calc(int a, int b)
