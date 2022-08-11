@@ -15,6 +15,7 @@ class APPLICATION_API CoolClass {
 public:
 	CoolClass(void);
 	int Calc(int a, int b);
+	int Ming(int c, int d);
 };
 
 
